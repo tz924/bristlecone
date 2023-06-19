@@ -1,26 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>GRBA</title>
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
-    <base target="_blank" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="/threejs/css/Qgis2threejs.css"
-    />
-    <script src="/threejs/js/three.min.js"></script>
-    <script src="/threejs/js/OrbitControls.js"></script>
-    <script src="/threejs/js/OutlineEffect.js"></script>
-    <script src="/threejs/js/Qgis2threejs.js"></script>
-    <script src="/dat-gui/dat.gui.min.js"></script>
-    <script src="/dat-gui/dat-gui_panel.js"></script>
-  </head>
-  <body>
+<%- include('../../includes/head.ejs') %>
+<link rel="stylesheet" type="text/css" href="/threejs/css/Qgis2threejs.css" />
+<script src="/threejs/js/three.min.js"></script>
+<script src="/threejs/js/OrbitControls.js"></script>
+<script src="/threejs/js/OutlineEffect.js"></script>
+<script src="/threejs/js/Qgis2threejs.js"></script>
+<script src="/threejs/dat-gui/dat.gui.min.js"></script>
+<script src="/threejs/dat-gui/dat-gui_panel.js"></script>
+</head>
+  <body style="color: black">
     <div id="view">
       <div id="northarrow"></div>
       <div id="navigation"></div>
@@ -151,10 +138,43 @@
     <div id="progress"><div id="progressbar"></div></div>
 
     <!-- header and footer -->
-    <div id="header">
-      Bristlecone Pine Risk Assessment at Bryce Cayon National Park
+    <div id="header" class="d-flex flex-column align-items-start">
+      <h3>
+        Bristlecone Pine Risk Assessment at Bryce Cayon National Park
+      </h3>
+      <a href="/" class="btn btn-primary mb-3">Back to Home</a>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#analysisModal">
+        View Analysis
+      </button>
     </div>
-    <div id="footer">Footer</div>
+
+    <div class="position-fixed bottom-0 end-0 p-3">
+      <img src="/3d-legend.png" alt="legend" width="150">
+    </div>
+
+    <div id="footer">
+      <div class="credits text-center fs-6 text-muted">
+        © 2023 Bristlecone Pine Risk Assessment Project | Created by Thomas Zhang
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="analysisModal" tabindex="-1" aria-labelledby="analysisModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="analysisModalLabel">Bristlecone Pine Risk Assessment Analysis</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Insert your analysis paragraphs here -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- animation -->
     <div id="narrativebox" class="ef1">
@@ -193,7 +213,7 @@
         }
       );
     </script>
-
     <%- include('../../includes/end.ejs') %>
   </body>
+
 </html>
