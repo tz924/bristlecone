@@ -3,9 +3,9 @@
 
 <body>
   <%- include('../includes/navigation.ejs') %>
-  <main class="container my-5">
-    <h1 class="mb-4">About the Bristlecone Pine Risk Assessment Project</h1>
-    <section>
+  <main class="container-md my-5 by-3">
+    <h1 class="mb-4">Bristlecone Pine Risk Assessment</h1>
+    <section class="lh-lg">
       <h2 class="mb-3">The Ancient Bristlecone Pines</h2>
       <p>
         The Great Basin Bristlecone Pines (Pinus longaeva) are among the oldest living trees on Earth, with some
@@ -16,41 +16,81 @@
       <img src="/bristlecone-dusk.jpg" alt="Bristlecone Pine" class="img-fluid rounded mb-3">
     </section>
 
-    <section>
+    <section class="lh-lg">
       <h2 class="mb-3">Our Project</h2>
       <p>
-        Despite their resilience, Bristlecone Pines are not immune to the impacts of climate change, pests, fire, and
-        human activity. Our project aims to assess the risk to Bristlecone Pine groves from these factors, providing a
-        comprehensive and data-driven tool to aid in their conservation.
+      The project is primarily focused on conducting a comprehensive risk assessment of the Great Basin Bristlecone Pine species (Pinus longaeva), which is distributed across various regions in Utah, Nevada, and eastern California. The main objective is to identify the key factors that pose a threat to the survival of the species, with a particular emphasis on the impact of climate change. This is achieved by analyzing existing research papers to provide an overview of the risks faced by the entire species range.
+      </p>
+      <p>
+      In addition, the project involves a detailed examination of the trees located within or near the boundaries of two national parks, Bryce Canyon and Great Basin. The examination of the groves within these parks is crucial to better understand the specific threats faced by the species in these areas.
+      </p>
+      <p>
+      Ultimately, the project aims to assess the risks these ancient trees face due to environmental changes and other factors and propose effective strategies for their preservation. The expected outcome of the project is a comprehensive report that provides valuable insights into the survival of the Great Basin Bristlecone Pine species and suggests measures to protect them.
       </p>
     </section>
 
-    <section>
-      <h2 class="mb-3">Our Methodology</h2>
+    <section class="lh-lg">
+      <h2 class="mb-3">Methodology</h2>
+      <h4>Data Collection</h4>
       <p>
-        We developed a risk scoring system based on five key factors: climate change (temperature and precipitation),
-        pest infestation, fire risk, and proximity to human activity. Each factor was scored on a scale from 0 (no risk)
-        to 5 (very high risk), with the final risk score for each grove being a weighted sum of these factors. The
-        weights were determined based on the relative impact of each factor on Bristlecone Pine health and survival, as
-        supported by scientific research.
+          The first step in our methodology involved collecting the necessary data for our analysis. We gathered geospatial datasets, climate data, pest infestation data, fire risk data, and trail data. The distribution data for the Bristlecone Pines were obtained from Brigham Young University, while the other data were sourced from various federal agencies. All data was carefully vetted and processed to ensure its accuracy and relevance to our study.
+      </p>
+      <h4>Data Analysis</h4>
+      <p>
+          The data analysis involved several steps. First, we used georeferencing techniques to map the distribution of the Bristlecone Pines within the two national parks of interest: Bryce Canyon and Great Basin. This allowed us to focus our analysis on these specific areas.
       </p>
       <p>
-        The data for these factors was sourced from various scientific databases and processed using GIS software. The
-        resulting risk scores were then visualized on a map, providing a clear and intuitive representation of the risk
-        to each Bristlecone Pine grove.
+          Next, we developed a five-point risk scoring system for each of the five factors: pests, fire, temperature, precipitation, and human activity. The scoring system was designed to be a practical tool for assessing and comparing the potential risk across different regions. The weights assigned to each factor in the final risk score were based on their relative impact on the health and survival of the Bristlecone Pines. Climate change, particularly changes in temperature and precipitation, was considered the most significant threat, while human activity was considered the least.
+      </p>
+      <h4>Presentation</h4>
+      <p>
+          Finally, the results of our analysis were seamlessly integrated into a website using Mapbox Studio and Mapbox GL. This allowed us to present our findings in a visually appealing and interactive format, making it easy for users to understand and explore the data.
       </p>
     </section>
 
-    <section>
-      <h2 class="mb-3">The Risk Map</h2>
+    <section class="lh-lg">
+      <h2 class="mb-3">Overview of Results</h2>
       <p>
-        The risk map is a powerful tool for visualizing the spatial distribution of risk to Bristlecone Pine groves.
-        Each grove is represented by a polygon, colored according to its risk score. This allows for easy identification
-        of high-risk areas, aiding in conservation planning and resource allocation.
+        The results of our study provide a comprehensive overview of the risks faced by the Great Basin Bristlecone Pine (Pinus longaeva). We found that these ancient trees, while resilient, are facing significant threats from environmental changes.
       </p>
       <img src="/overview.jpg" alt="Risk Map" class="img-fluid rounded mb-3">
-    </section>
-
+  <p>
+    Our data collection and analysis revealed the following:
+  </p>
+  <ul>
+    <li>A total of 757 groves of Bristlecone Pines were identified.</li>
+    <li>Of these, 709 groves (93.7%) were located within the 1970 boundary. Most of the trees outside of this boundary were found in Utah.</li>
+    <li>551 groves (72.8%) were located within National Forest boundaries, while only 25 groves (3.3%) were within National Park boundaries.</li>
+    <li>This leaves 23.9% of the groves not under federal management, suggesting a need for increased conservation efforts in these areas.</li>
+  </ul>
+  <p>
+    In terms of risk, the groves were categorized into three levels: Very Low, Low, and Medium. The distribution was as follows:
+  </p>
+  <ul>
+    <li>Very Low Risk: 67 groves (8.8%)</li>
+    <li>Low Risk: 562 groves (74.2%)</li>
+    <li>Medium Risk: 128 groves (16.9%)</li>
+  </ul>
+  <p>
+    It's important to note that there were no groves identified as being at a high risk. This is a testament to the resilience of the Bristlecone Pines and the effectiveness of current conservation efforts. However, the presence of medium-risk groves indicates that there are still significant threats that need to be addressed.
+  </p>
+  <p>
+    The changing climate, with its hotter temperatures and more powerful fires, poses a significant threat to these ancient trees, especially at the lower end of their elevation range. This is reflected in our risk assessment, which assigns the highest weight to climate change factors.
+  </p>
+  <p>
+    Our study suggests that more proactive measures are needed to protect the Bristlecone Pines, particularly in areas not under federal management. This could include increased monitoring, the implementation of protective measures such as controlled burns to reduce fire risk, and public education about the importance of these ancient trees.
+  </p>
+  <p>
+    For a more detailed view of the risks faced by the Bristlecone Pines in specific areas, we have created 3D maps for two featured national parks. These maps provide a visual representation of the groves and their associated risk levels. You can view these maps at the following links:
+  </p>
+  <ul>
+    <li><a href="/map/brca" target="_blank">Bryce Canyon National Park 3D Map</a></li>
+    <li><a href="/map/grba" target="_blank">Great Basin National Park 3D Map</a></li>
+  </ul>
+  <p>
+    These maps, along with the rest of our findings, provide a valuable tool for conservationists, park managers, and policymakers in their efforts to protect the Great Basin Bristlecone Pine. The highest risk score found was 2.8, while the lowest was 0.5, with an average of 1.62. This indicates that while there are areas of concern, the overall risk level is moderate.
+  </p>
+</section>
   </main>
   <%- include('../includes/end.ejs') %>
   </body>

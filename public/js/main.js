@@ -32,6 +32,14 @@ const map = new mapboxgl.Map({
   projection: "globe",
 });
 
+// Add padding to the map
+map.setPadding({
+  top: 0,
+  bottom: 0,
+  left: 250,
+  right: 0,
+});
+
 map.on("style.load", () => {
   map.setFog({
     color: "rgb(186, 210, 235)", // Lower atmosphere
@@ -67,7 +75,7 @@ for (let park of parks) {
       <li>${park.groves} Groves</li>
       <li>${park.acres} Acres</li>
     </ul>
-    <a href="${park.link}" style="color: #fff; background-color: #0d6efd; border-color: #0d6efd; display: inline-block; text-align: center; vertical-align: middle; padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; border-radius: 0.25rem; transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;">More info</a>
+    <a href="${park.link}" style="color: #fff; background-color: #0d6efd; border-color: #0d6efd; display: inline-block; text-align: center; vertical-align: middle; padding: 0.375rem 0.75rem; font-size: 1rem; line-height: 1.5; border-radius: 0.25rem; transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;">View 3D Map</a>
   </div>`
   );
 
@@ -88,3 +96,19 @@ for (let park of parks) {
     marker.getPopup().addTo(map);
   });
 }
+
+// Zoom to the extent
+document.getElementById("extent").addEventListener("click", () => {
+  // Fly to the center of the extent and zoom in
+  map.flyTo({ center: [-113.225, 38.261], zoom: 6 });
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  // Close all other popups
+  for (let otherMarker of markers) {
+    otherMarker.getPopup().remove();
+  }
+
+  // Fly to the park and open its popup
+  map.flyTo({ center: [-114.2634, 38.93], zoom: 2 });
+});
