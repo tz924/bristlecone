@@ -84,7 +84,7 @@ for (let park of parks) {
     }
 
     // Fly to the park and open its popup
-    map.flyTo({ center: park.coordinates, zoom: 10 });
+    map.flyTo({ center: park.coordinates, zoom: 12 });
     marker.getPopup().addTo(map);
   });
 }
