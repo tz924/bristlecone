@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use("/admin", adminRoutes);
 // app.use(shopRoutes);
 app.use(homeRoutes);
-app.use(mapRoutes);
+app.use("/map", mapRoutes);
 
 app.use(errorController.get404);
 

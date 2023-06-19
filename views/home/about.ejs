@@ -1,0 +1,58 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+  <%- include('../includes/navigation.ejs') %>
+  <main class="container my-5">
+    <h1 class="mb-4">About the Bristlecone Pine Risk Assessment Project</h1>
+    <section>
+      <h2 class="mb-3">The Ancient Bristlecone Pines</h2>
+      <p>
+        The Great Basin Bristlecone Pines (Pinus longaeva) are among the oldest living trees on Earth, with some
+        specimens exceeding 5,000 years of age. These ancient trees have witnessed the rise and fall of civilizations,
+        surviving in the harsh and arid conditions of the western United States. Their resilience and longevity are a
+        testament to nature's tenacity and adaptability.
+      </p>
+      <img src="/bristlecone-dusk.jpg" alt="Bristlecone Pine" class="img-fluid rounded mb-3">
+    </section>
+
+    <section>
+      <h2 class="mb-3">Our Project</h2>
+      <p>
+        Despite their resilience, Bristlecone Pines are not immune to the impacts of climate change, pests, fire, and
+        human activity. Our project aims to assess the risk to Bristlecone Pine groves from these factors, providing a
+        comprehensive and data-driven tool to aid in their conservation.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="mb-3">Our Methodology</h2>
+      <p>
+        We developed a risk scoring system based on five key factors: climate change (temperature and precipitation),
+        pest infestation, fire risk, and proximity to human activity. Each factor was scored on a scale from 0 (no risk)
+        to 5 (very high risk), with the final risk score for each grove being a weighted sum of these factors. The
+        weights were determined based on the relative impact of each factor on Bristlecone Pine health and survival, as
+        supported by scientific research.
+      </p>
+      <p>
+        The data for these factors was sourced from various scientific databases and processed using GIS software. The
+        resulting risk scores were then visualized on a map, providing a clear and intuitive representation of the risk
+        to each Bristlecone Pine grove.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="mb-3">The Risk Map</h2>
+      <p>
+        The risk map is a powerful tool for visualizing the spatial distribution of risk to Bristlecone Pine groves.
+        Each grove is represented by a polygon, colored according to its risk score. This allows for easy identification
+        of high-risk areas, aiding in conservation planning and resource allocation.
+      </p>
+      <img src="/overview.jpg" alt="Risk Map" class="img-fluid rounded mb-3">
+    </section>
+
+  </main>
+  <%- include('../includes/end.ejs') %>
+  </body>
+
+</html>

@@ -3,10 +3,17 @@
 
 <body>
   <%- include('../includes/navigation.ejs') %>
-  <main>
+<main>
     <!-- <div class="background-video">
        <iframe width="100%" height="800px" src="https://www.youtube.com/embed/-A0KsKXGlfk?autoplay=1&mute=1&loop=1&playlist=-A0KsKXGlfk&controls=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div> -->
     <div id="map"></div>
+   <div class="button-container position-absolute top-25 start-10 translate-middle-y ps-3 d-flex flex-column">
+        <button class="btn btn-primary mb-3" id="bryce-canyon">Bryce Canyon</button>
+        <button class="btn btn-primary" id="great-basin">Great Basin</button>
+    </div>
   </main>
   <%- include('../includes/end.ejs') %>
+  </body>
+
+</html>
